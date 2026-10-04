@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>️untukkkkkk ikaaaa andrianiii</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #ffe4ec, #fff5f8);
+    color: #4a2731;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+nav a {
+    text-decoration: none;
+    color: #d6336c;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff477e;
+    transform: scale(1.1);
+}
+
+/* HALAMAN */
+section {
+    min-height: 100vh;
+    padding: 100px 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* HOME */
+.home {
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 800px;
+    animation: muncul 1.5s ease;
+}
+
+.heart {
+    font-size: 80px;
+    animation: detak 1.2s infinite;
+}
+
+h1 {
+    font-size: 50px;
+    color: #d6336c;
+    margin: 15px 0;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+button {
+    border: none;
+    padding: 13px 25px;
+    border-radius: 30px;
+    background: #d6336c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(214,51,108,0.3);
+}
+
+button:hover {
+    background: #b91c50;
+    transform: translateY(-3px);
+}
+
+/* PESAN */
+.message-box {
+    max-width: 750px;
+    background: rgba(255,255,255,0.8);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.message-box h2 {
+    color: #d6336c;
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+
+.message-box p {
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+/* KENANGAN */
+.memories {
+    flex-direction: column;
+}
+
+.memories h2 {
+    font-size: 40px;
+    color: #d6336c;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 12px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.4s;
+    animation: muncul 1.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) rotate(1deg);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card p {
+    padding: 12px;
+    font-weight: bold;
+}
+
+/* HARAPAN */
+.promise {
+    background: linear-gradient(135deg, #fff0f5, #ffe1eb);
+}
+
+.promise-box {
+    max-width: 700px;
+}
+
+.promise-box h2 {
+    font-size: 40px;
+    color: #d6336c;
+    margin-bottom: 20px;
+}
+
+.promise-box p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+footer {
+    padding: 30px;
+    text-align: center;
+    background: #d6336c;
+    color: white;
+}
+
+/* HATI TERBANG */
+.floating-heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 25px;
+    animation: terbang 6s linear forwards;
+    pointer-events: none;
+    z-index: 999;
+}
+
+@keyframes detak {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes terbang {
+    0% {
+        bottom: -30px;
+        opacity: 0;
+        transform: translateX(0) rotate(0deg);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        bottom: 110vh;
+        opacity: 0;
+        transform: translateX(100px) rotate(360deg);
+    }
+}
+
+/* HP */
+@media(max-width:600px) {
+
+    nav {
+        gap: 12px;
+        padding: 12px 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .heart {
+        font-size: 65px;
+    }
+
+    .message-box {
+        padding: 25px;
+    }
+
+    .message-box h2,
+    .memories h2,
+    .promise-box h2 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <a href="#home">🏠 Home</a>
+    <a href="#pesan">💌 Pesan</a>
+    <a href="#kenangan">📸 Kenangan</a>
+    <a href="#harapan">❤️ Harapan</a>
+</nav>
+
+
+<!-- HOME -->
+<section id="home" class="home">
+
+    <div class="container">
+
+        <div class="heart">❤️</div>
+
+        <h1>maafinnn kikyyy yaahhh selamaa iniii..</h1>
+
+        <p class="subtitle">
+            adaaa beberapaaa halll yanggg inginn kikyyy sampaiikannn
+        </p>
+
+        <button onclick="scrollToPesan()">
+            PENCETT
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PESAN -->
+<section id="pesan">
+
+    <div class="message-box">
+
+        <h2>teruntukkk ikaaa ❤️</h2>
+
+        <p>
+            maafff yahhhh ternyataa semuaaa yanggg terjadiii mamanggg salahhhh kuuu diii manaaa akuuu yanggg selaluuy egoisss dalammm semuaaa hall yanggg membuattt kitaaa berpisahh sepertii iniii
+            <br><br>
+
+            akuuu benarrr benarr mintaaa maaffff karenaaa selamaa iniii akuuu masiihh belummm jadiii yanggg terbaikkk buattt kamuhh, akuu masiii selaluuu buattt kesalahannnn bolakk balikkk
+            <br><br>
+
+            akuuu tauuuu kataaa maafff lewattt manaa punnn belummm tentuui bisaaaa merubahhh semuaaa nyaaaa, akuuu jugaaa ndaaa bisaaa terlaluuu berharappp kamuhhh bisaaa kembalii secepatt ituuu
+            <br><br>
+
+            terimakasihhh udahhh jadioo wanitaa istimewaa dii hatii kuuu, terimakasihh udahhh memberikannn kehangatannn
+            <br><br>
+
+            akuuu buattt webb iniii hanyaaa inginnn kasiii liattt 15% hasilll yanggg inginnn beriii diii tanggalll 3 nantiii, akuu ambilll 15% dariii codingann untukk tanggall 3, tungguinn dii tanggall 3 gatauuu udahhh balikj apaaa belumm tapiii bakalann kikyyy kasii liattt
+            <br><br>
+
+            <b>
+            maaffff yanggg sebesarrr besarrrnyaa yaaaa
+            </b>
+        </p>
+
+        <br>
+
+        <button onclick="buatHati()">
+            Aku Benar-Benar Minta Maaf ❤️
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- KENANGAN -->
+<section id="kenangan" class="memories">
+
+    <h2>Kenangan Kita 📸</h2>
+
+    <p style="margin-bottom:25px;">
+        iniiii semogaaa bisaaa selaluu diii ingattt
+    </p>
+
+    <div class="gallery">
+
+        <!-- FOTO 1 -->
+        <div class="card">
+            <img src="foto1.jpg" alt="Kenangan 1">
+            <p>HARII PERTAMAA KITAA BERDUAANN❤️</p>
+        </div>
+
+        <!-- FOTO 2 -->
+        <div class="card">
+            <img src="foto2.jpg" alt="Kenangan 2">
+            <p>HARII PERTAMAAA JALANN BERDUAA🥰</p>
+        </div>
+
+        <!-- FOTO 3 -->
+        <div class="card">
+            <img src="foto3.jpg" alt="Kenangan 3">
+            <p>MOMENN DIII MANAAAA KITAA BERSENANGG SENNAGG💕</p>
+        </div>
+
+        <!-- FOTO 4 -->
+        <div class="card">
+            <img src="foto4.jpg" alt="Kenangan 4">
+            <p>PERTAMAA AKUU MENCOBAA CHATT KAMUUU ❤️</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HARAPAN -->
+<section id="harapan" class="promise">
+
+    <div class="promise-box">
+
+        <h2>harapannn kuuuu7❤️</h2>
+
+        <p>
+            semogaaaa kamuhh bahagiaaa diii satttt gaa adaaa kikyyy diii hatiii kamuuuu, semogaaa hall halll yanggg hilanggg dii dirii kamuuu akann kembalii
+            <br><br>
+
+            akuuuu bakalann merubahhh diriii kikyyy mrnjadii lebihh baikk lagiii supayaaa kamuuu akann merasakannn dii cintaiii olehh seseoranggg
+            <br><br>
+
+            jikaaa masiii adaaa kesempatannn akuuu inginn kamuhh kembaliii, akuuu diii siniii bakalannn selaluuu nungguinn kamuhhh hingaaa kamuhh kembalii
+            <br><br>
+
+            <b>
+            akuuuu tidakkk berjanjiiii bisaaa jadii lebihhh sempurnaaa, tapii akuuu betjanjiii akuuu akannn merubahhh diriii kuhhh menjadii lebihhh baikkk
+            </b>
+        </p>
+
+        <br>
+
+        <button onclick="buatHatiBanyak()">
+            ❤️ hanyaaa kamuuu
+        </button>
+
+    </div>
+
+</section>
+
+
+<footer>
+    diii buattt olehhh seseorangg yanggg selaluu menungguuu kamuuu, walapunnn inii seperempatt websitee belumm jadiii tapiii inii9 caraaa kikyyy
+</footer>
+
+
+<script>
+
+/* SCROLL KE PESAN */
+function scrollToPesan() {
+    document.getElementById("pesan").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+
+/* MEMBUAT HATI */
+function buatHati() {
+
+    for(let i = 0; i < 10; i++) {
+
+        setTimeout(() => {
+
+            let heart = document.createElement("div");
+
+            heart.className = "floating-heart";
+
+            heart.innerHTML = "❤️";
+
+            heart.style.left = Math.random() * 100 + "vw";
+
+            heart.style.fontSize =
+                (20 + Math.random() * 30) + "px";
+
+            heart.style.animationDuration =
+                (4 + Math.random() * 3) + "s";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 7000);
+
+        }, i * 200);
+    }
+}
+
+
+/* HATI BANYAK */
+function buatHatiBanyak() {
+
+    for(let i = 0; i < 30; i++) {
+
+        setTimeout(() => {
+
+            let heart = document.createElement("div");
+
+            heart.className = "floating-heart";
+
+            const hearts = ["❤️","💕","💖","💗","💓"];
+
+            heart.innerHTML =
+                hearts[Math.floor(Math.random() * hearts.length)];
+
+            heart.style.left = Math.random() * 100 + "vw";
+
+            heart.style.fontSize =
+                (15 + Math.random() * 35) + "px";
+
+            heart.style.animationDuration =
+                (3 + Math.random() * 4) + "s";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 7000);
+
+        }, i * 100);
+    }
+}
+
+
+/* HATI OTOMATIS */
+setInterval(() => {
+
+    let heart = document.createElement("div");
+
+    heart.className = "floating-heart";
+
+    heart.innerHTML = "💗";
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 6000);
+
+}, 1500);
+
+</script>
+
+</body>
+</html>
